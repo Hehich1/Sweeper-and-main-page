@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+
+    
+}
+
+/* Style panel */
+.doc-panel {
+    max-width: 90%;
+    margin: auto;
+
+    background: 
+        linear-gradient(
+            to bottom right,
+            rgba(26, 32, 44, 0.85),
+            rgba(15, 18, 24, 0.85)
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 10px;
+
+    padding: 25px;
+
+    box-shadow: 0 0 20px rgba(0,0,0,0.6);
+    color: #c7d5e0;
+
+    animation: fadeIn 0.4s ease;
+}
+
+.doc-panel h1 {
+    color: #ffffff;
+    margin-top: 0;
+}
+
+.doc-panel img {
+    max-width: 100%;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+
+/* gentle fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

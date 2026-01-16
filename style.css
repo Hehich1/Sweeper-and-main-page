@@ -1,0 +1,68 @@
+/* style.css */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #222;
+  color: white;
+  text-align: center;
+  overflow:auto;
+}
+
+#game {
+  display: grid;
+  grid-template-columns: repeat(10, 30px);
+  grid-template-rows: repeat(10, 30px);
+  gap: 2px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.cell {
+  width: 30px;
+  height: 30px;
+  background: #444;
+  border: 1px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.cell.revealed {
+  background: #bbb;
+  color: #111;
+  font-weight: bold;
+}
+
+.cell.revealed:empty {
+  background: #ddd;
+}
+
+.cell.revealed[data-num="1"] { color: blue; }
+.cell.revealed[data-num="2"] { color: green; }
+.cell.revealed[data-num="3"] { color: red; }
+.cell.revealed[data-num="4"] { color: purple; }
+.cell.revealed[data-num="5"] { color: maroon; }
+.cell.revealed[data-num="6"] { color: turquoise; }
+.cell.revealed[data-num="7"] { color: black; }
+.cell.revealed[data-num="8"] { color: gray; }
+
+
+.cell.mine {
+  background: crimson;
+}
+
+.cell.flagged {
+  background: orange;
+}
+
+#controls {
+  margin: 10px 0;
+  color: white;
+}
+
+#controls input {
+  width: 60px;
+  padding: 5px;
+  font-size: 16px;
+}

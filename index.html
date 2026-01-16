@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project Navigation</title>
+    <link rel="stylesheet" href="indexstyle.css">
+</head>
+<body>
+
+<div class="viewport169">
+
+<!-- Logo area -->
+    <div class="logo">
+        <!-- OPTION 1: Text logo -->
+        <h1>Main Page</h1>
+
+        <!-- OPTION 2: Image logo -->
+        <img src="logo.jpg" alt="Logo">
+    </div>
+	<div class="navbar">
+		<button onclick="loadPage('Documentation.html')">Main</button>
+		<button onclick="loadPage('minesweeper.html')">Minesweeper</button>
+		<button onclick="loadPage('insert here.html')">Page 2</button>
+		<button onclick="loadPage('insert here.html')">Page 3</button>
+	</div>
+
+	<iframe id="contentFrame" src="Documentation.html"></iframe>
+	
+</div>
+
+<script>
+    function loadPage(page) {
+    const frame = document.getElementById("contentFrame");
+
+    // Fade out
+    frame.classList.add("fade-out");
+
+    // After fade completes, load new page, then fade in
+    setTimeout(() => {
+        frame.src = page;
+
+        frame.onload = () => {
+            frame.classList.remove("fade-out");
+        };
+    }, 150);
+}
+</script>
+
+</body>
+</html>
